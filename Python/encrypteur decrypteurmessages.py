@@ -13,8 +13,6 @@ for i,k in enumerate(JEUCAR):
 for c in string.printable[-5:]:
     DICO_ENCRYP[c]=c
     DICO_DECRYP[c]=c
-##NOMFIC_IN = "cryptopy_in.pickle"
-##NOMFIC_OUT = "cryptopy_out.pickle"
 def encrypter(texteclair, vardico_cryp):
     textesecret = []
     for k in texteclair :
@@ -29,11 +27,6 @@ def decrypter(textesecret, vardico_decryp):
         v = vardico_decryp[k]
         texteclair.append(v)
     return ''.join(texteclair)
-##def sauver(self):
-##    with open(NOMFIC_IN, 'wb')as ficow:
-##        pickle.dump(self,ficow)
-##    with open(NOMFIC_OUT, 'wb')as ficor:
-##        pickle.dump(self, ficor)
 
 print("~~~~Encrypt or decrypt your messages with Caesar discrepancy~~~~")
 print()
@@ -42,27 +35,7 @@ print("---Pay attention ! Not insert special characters (é,à,è,$...)")
 print()
 time.sleep(0.5)
 z=input("Do you want translate since (h)ere or since a (c)ard index :")
-##if z=="c" or z=="C":
-##    pass
-##    sauver
-##    input("You need two card index : cryptopy_in.txt and cryptopy_out.txt. When it's right, press enter")
-##    a = input("Do you want (e)ncrypt or (d)ecrypt ? :")
-##    if os.path.exists(NOMFIC_IN)and os.path.exists(NOMFIC_OUT):
-##        if a =="e" or a =="E":
-##            print("Lecture...")
-##            with open(NOMFIC_IN,'r')as fic_lect:
-##                message = fic_lect.read()
-##                with open(NOMFIC_OUT,'w')as fic_ecri:
-##                    for g in range(0,26):
-##                        CARSUBTI = JEUCAR[-g:] + JEUCAR[:-g]
-##                        DICO_ENCRYP ={JEUCAR[i]: CARSUBTI[i] for i in range(len(JEUCAR))}
-##                        txt_resultat = encrypter(message, DICO_ENCRYP)
-##                        fic_ecri.write(txt_resultat)
-##                        time.sleep(0.001)
-##
-##        elif a=="d" or a =="D":
-##            print("Lecture...")
-##    
+
 if z=="h" or z=="Z":
     a = input("---Do you want (e)ncrypt or (d)ecrypt ? :")
     if a =="e" or a =="E":
@@ -111,4 +84,5 @@ if z=="h" or z=="Z":
 
            
    
+
 
